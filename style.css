@@ -193,35 +193,36 @@ nav ul li a:hover::after{
 
 .experience-timeline {
     position: relative;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 .experience-box {
     position: relative;
     margin-bottom: 20px; /* Space between each experience box */
-    padding-left: 200px; /* Space for the dot and line */
-    padding-right: 200px;
+    padding-left: 300px; /* Space for the dot and line */
+    padding-right: 300px;
     padding-bottom: 25px;
 }
 
 .experience-dot {
     position: absolute;
-    left: 155px;
+    left: 255px;
     top: 0;
     width: 20px;
     height: 20px;
-    background-color: #d8382f; /* Dot color */
-    border-radius: 50%;
+    background-color: #d8382f; /* Make the inside transparent */
+    border: 3px solid #d8382f; /* Border color and thickness */
+    border-radius: 50%; /* Make it circular */
 }
 
 .experience-box:not(:last-child)::before {
     content: '';
     position: absolute;
-    left: 165px;
+    left: 265px;
     top: 20px;
     bottom: -40px;
     width: 2px;
-    background-color: #FF6347; /* Line color */
+    background-color: #FF6347; 
 }
 
 .experience-content {
@@ -247,6 +248,7 @@ nav ul li a:hover::after{
     transform: translateY(-10px); /* Slightly raise the box */
     position: relative;
     box-shadow: 0px 0px 198px 0px rgba(255, 0, 0, 0.5);
+    transition-duration: 1s;
 }
 
 .experience-header {
@@ -553,7 +555,7 @@ nav .fas{
     font-size: 16px;
     color: #fff;
     border: 2px solid #0a0909; /* White outline */
-    background: transparent; /* Transparent background */
+    background: transparent; /*  background */
     cursor: pointer;
 }
 
@@ -563,7 +565,7 @@ nav .fas{
 }
 
 .filtered-out {
-    opacity: 0.3; /* Gray out filtered out skill boxes */
+    opacity: 0.05; /* Gray out filtered out skill boxes */
 }
 
 .highlight {
@@ -595,28 +597,19 @@ nav .fas{
     border: 2px inset #fbf9f9ee;
     border-radius: 10px;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+    perspective: 100000px; /* Added for 3D effect */
 }
 
 .skill-box i {
     font-size: 50px;
 }
 
-.skill-box {
-    position: relative;
-    width: 100px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px inset #fbf9f9ee;
-    border-radius: 10px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
 .skill-box:hover {
     transform: scale(1.1);
     border-color: red; /* Change border color to red on hover */
+    cursor: pointer;
+
 }
 
 .skill-box:hover .skill-level {

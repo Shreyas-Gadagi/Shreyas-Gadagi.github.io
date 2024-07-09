@@ -90,3 +90,39 @@ function filterSkills(category) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const skillBoxes = document.querySelectorAll('.skill-box');
+
+    skillBoxes.forEach(box => {
+        box.addEventListener('mousemove', handleMouseMove);
+        box.addEventListener('mouseleave', handleMouseLeave);
+    });
+
+    function handleMouseMove(event) {
+        const box = event.currentTarget;
+        const rect = box.getBoundingClientRect();
+        const x = event.clientX - rect.left; // x position within the box
+        const y = event.clientY - rect.top;  // y position within the box
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const deltaX = x - centerX;
+        const deltaY = y - centerY;
+
+        const percentX = deltaX / centerX;
+        const percentY = deltaY / centerY;
+
+        const maxTilt = 30; // Maximum tilt angle in degrees
+        const tiltX = maxTilt * percentY; // Invert tilt direction on X-axis
+        const tiltY = -maxTilt * percentX;
+
+        box.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    }
+
+    function handleMouseLeave(event) {
+        const box = event.currentTarget;
+        box.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+    }
+});

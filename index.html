@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Gadagi's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+    <!-- Include Font Awesome or other necessary CSS -->
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#experience">Experiences</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Shreyas</span><br></h1>
+            <p id="role">Undergraduate Researcher and Software Engineer</p>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/McLoving.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Shreyas Gadagi, a passionate and driven computer science student at Georgia Tech, with a minor in Mathematics. 
+                    I am deeply fascinated by innovative technologies and committed to solving real-world problems through creative and efficient solutions. 
+                    With proficiency in languages like Java, Python, C/C++, JavaScript, HTML/CSS, Ruby, and Swift, and experience with frameworks such as React and Node.js, I am well-equipped to tackle diverse technical challenges. My interests span across advanced AI models, data-driven analysis, and innovative web solutions. I am excited about the future of technology and eager to contribute my skills and knowledge to impactful projects, making a positive difference in the world.</p>
+                
+        </div>
+    </div>
+</div>
+<!-- ---------My Skills---------------- -->
+<div id="services">
+    <h1 class="sub-title">My Skills</h1>
+    <div class="skills-grid">
+        <div class="skill-box back-end">
+            <i class="devicon-python-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Python</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-javascript-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">JavaScript</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-java-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Java</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-cplusplus-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">C++</div>
+            </div>
+        </div> 
+<div class="skill-box front-end">
+            <i class="devicon-html5-plain colored"></i>
+            <div class="skill-details front-end">
+                <div class="skill-name">HTML</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-css3-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">CSS</div>
+            </div>
+        </div>
+        <div class="skill-box front-end">
+            <i class="devicon-react-original colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">React</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-pytorch-original colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">PyTorch</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-vscode-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">VS Code</div>
+            </div>
+        </div>
+        <div class="skill-box tools">
+            <i class="devicon-xcode-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">Xcode</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-c-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">C</div>
+            </div>
+        </div>
+        <div class="skill-box back-end">
+            <i class="devicon-mysql-plain colored"></i>
+            <div class="skill-details">
+                <div class="skill-name">MySQL</div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-section">
+        <button class="button" onclick="filterSkills('front-end')" data-category="front-end">Frontend</button>
+        <button class="button" onclick="filterSkills('back-end')" data-category="back-end">Backend</button>
+        <button class="button" onclick="filterSkills('tools')" data-category="tools">Tools</button>
+    </div>
+</div>
+<!-- ----------Experience------------ -->
+</div>
+    <div id="experience">
+    <h1 class="sub-title">Experiences</h1>  
+    <div class="experience-timeline">
+        <div class="experience-box">
+        <div class="experience-dot"></div>
+            <div class="experience-content">
+                <div class="experience-header">
+                    <img src="images/GTLogo.jpeg" alt="Company Logo" class="company-logo">
+                    <div class="experience-details">
+                        <h3>Undergraduate Researcher</h3>
+                        <p class="location">Georgia Tech - Atlanta, GA</p>
+                        <p class="date">January 2021 - Present</p>
+                    </div>
+                </div>
+                <p>Part of CORE Robotics Lab. Designed a dual-model system integrating ChatGPT and a discriminator AI, successfully generating over 1000+ valid CAD model transformation requests, significantly enhancing data-driven design processes.</p>
+            </div>
+        </div>
+        <div class="experience-box">
+        <div class="experience-dot"></div>
+            <div class="experience-content">
+                <div class="experience-header">
+                    <img src="images/ChryselysLogo.jpg" alt="Company Logo" class="company-logo">
+                    <div class="experience-details">
+                        <h3>Software Engineer Intern</h3>
+                        <p class="location">Chryselys - Palo Alto, CA</p>
+                        <p class="date">Aug 2021 - Dec 2021</p>
+                    </div>
+                </div>
+                <p>AI Engineering & Ops</p>
+            </div>
+        </div>
+        <div class="experience-box">
+            <div class="experience-dot"></div>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <img src="images/GeorgiaTroutUnlimitedLogo.png" alt="Company Logo" class="company-logo">
+                        <div class="experience-details">
+                            <h3>Data Analyst Intern</h3>
+                            <p class="location">Georgia Trout Unlimited - SugarHill, GA</p>
+                            <p class="date">June 2024 - Present</p>
+                        </div>
+                    </div>
+                    <p>Collaborated with UGA scientists using LiDAR, CASSI, and GeoSlam data to analyze the impact of stormwater erosion on Crayfish Creek.</p>
+                </div>
+            </div>
+        <div class="experience-box">
+            <div class="experience-dot"></div>
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <img src="images/ProjectOxyLogo.jpg" alt="Company Logo" class="company-logo">
+                        <div class="experience-details">
+                            <h3>Frontend Developer Intern</h3>
+                            <p class="location">ProjectOxy - Remote</p>
+                            <p class="date">June 2024 - Present</p>
+                        </div>
+                    </div>
+                    <p>Collaborated with a non-profit team to address critical medical oxygen issues during the Covid-19 pandemic. Designed, programmed, and deployed interactive web features using Java, HTML, CSS, and the React framework,
+                        resulting in a notable 20% surge in user engagement within a month.</p>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/how-to-make-a-discord-bot.png">
+                <div class="layer">
+                    <h3>PDF Summarizer Discord Bot</h3>
+                    <p>Developed a Discord bot using Python and Discord.py that reads PDF files and generates concise bullet-point summaries.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>TBH</h3>
+                    <p>Come back later for future updates . . .</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>TBH</h3>
+                    <p>Come back later for future updates . . .</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <h2>Shreyas Gadagi</h2>
+    <div class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#portfolio">Projects</a>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sgadagi/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:sgadagi3@gatech.edu"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+14047176000"><i class="fas fa-phone"></i></a>
+    </div>
+    <div class="copyright">
+        &copy; 2024 Shreyas Gadagi. All rights reserved.
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

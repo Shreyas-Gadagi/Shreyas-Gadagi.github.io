@@ -443,6 +443,54 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+
+    #experience {
+        padding: 30px 0; /* Adjusted padding for smaller screens */
+        margin-bottom: 0;
+    }
+    
+    .experience-box {
+        position: relative;
+        margin-bottom: 20px; /* Space between each experience box */
+        padding-left: 20px; /* Reduce left padding */
+        padding-right: 20px; /* Reduce right padding */
+        padding-bottom: 25px;
+    }
+    
+    .experience-dot {
+        position: absolute; /* Ensure dot is positioned absolutely */
+        left: 0; /* Align dot with the left edge of the timeline */
+        top: 0;
+        transform: translateX(-50%); /* Center dot horizontally */
+        width: 15px; /* Adjust dot size */
+        height: 15px;
+        background-color: #d8382f; /* Dot color */
+        border-radius: 50%;
+    }
+    
+    .experience-box:not(:last-child)::before {
+        left: 0; /* Adjust line position */
+        top: 20px;
+        bottom: -40px;
+    }
+    
+    /* Adjust content padding and font size for smaller screens */
+    .experience-content {
+        padding: 15px;
+    }
+    
+    .experience-content h3 {
+        font-size: 1.2em; /* Adjusted font size */
+    }
+    
+    .experience-content p {
+        font-size: 0.9em; /* Adjusted font size */
+    }
+
+    .experience-timeline {
+        padding-left: 20px;
+    }
+    
 }
 #msg{
     color: #61b752;

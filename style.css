@@ -245,7 +245,8 @@ nav ul li a:hover::after{
 /* Hover effect */
 .experience-content:hover {
     transform: translateY(-10px); /* Slightly raise the box */
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.5);
+    position: relative;
+    box-shadow: 0px 0px 198px 0px rgba(255, 0, 0, 0.5);
 }
 
 .experience-header {
@@ -528,8 +529,6 @@ nav .fas{
     padding: 0 5px; /* Optional: Add padding for better spacing */
     display: inline-block; /* Ensure it wraps around the text */
 }
-
-/* skills section grid */
 
 
 .tab-contents {

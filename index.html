@@ -199,38 +199,42 @@
     </div>
 </div>
 <!-- ----------portfolio------------ -->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/how-to-make-a-discord-bot.png">
-                <div class="layer">
-                    <h3>PDF Summarizer Discord Bot</h3>
-                    <p>Developed a Discord bot using Python and Discord.py that reads PDF files and generates concise bullet-point summaries.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-2.png">
-                <div class="layer">
-                    <h3>TBA</h3>
-                    <p>Come back later for future updates . . .</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>TBA</h3>
-                    <p>Come back later for future updates . . .</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+<div class="buttons-section">
+    <button class="button" onclick="filterProjects('all')">All</button>
+    <button class="button" onclick="filterProjects('ml')">Machine Learning</button>
+    <button class="button" onclick="filterProjects('apps')">Apps</button>
+</div>
+
+<div class="project-grid">
+    <div class="project-card">
+        <img src="images/project-image1.jpg" alt="Project Image" class="project-image">
+        <div class="project-description">
+            <h3>Project 1</h3>
+            <p>This is a brief description of Project 1...</p>
         </div>
-        <a href="#" class="btn">See more</a>
+        <button class="view-project-btn" onclick="openModal('Project 1', 'Detailed project description...', ['Python', 'React'])">View Project</button>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project-image2.jpg" alt="Project Image" class="project-image">
+        <div class="project-description">
+            <h3>Project 2</h3>
+            <p>This is a brief description of Project 2...</p>
+        </div>
+        <button class="view-project-btn" onclick="openModal('Project 2', 'Detailed project description...', ['JavaScript', 'Node.js'])">View Project</button>
+    </div>
+
+    <div class="project-card">
+        <img src="images/project-image3.jpg" alt="Project Image" class="project-image">
+        <div class="project-description">
+            <h3>Project 3</h3>
+            <p>This is a brief description of Project 3...</p>
+        </div>
+        <button class="view-project-btn" onclick="openModal('Project 3', 'Detailed project description...', ['Java', 'Spring'])">View Project</button>
     </div>
 </div>
+
+
 
 <footer class="footer">
     <h2>Shreyas Gadagi</h2>

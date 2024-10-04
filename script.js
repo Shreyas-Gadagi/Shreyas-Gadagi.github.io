@@ -139,12 +139,24 @@ function filterProjects(category) {
     });
 }
 
-function openModal(title, description, tags) {
+// Open Modal Function:
+// Function to open the modal
+function openModal(title, description, tags, imageUrl, projectLink) {
+    // Set modal title and description
     document.getElementById('modal-title').textContent = title;
     document.getElementById('modal-description').textContent = description;
     
+    // Set modal image
+    document.getElementById('modal-image').src = imageUrl;
+    
+    // Set modal project link
+    const linkElement = document.getElementById('modal-link');
+    linkElement.href = projectLink;
+    linkElement.style.display = projectLink ? 'inline-block' : 'none'; // Hide the link if none provided
+    
+    // Set modal tags
     const tagContainer = document.getElementById('modal-tags');
-    tagContainer.innerHTML = ''; // Clear existing tags
+    tagContainer.innerHTML = ''; // Clear previous tags
     tags.forEach(tag => {
         const tagElement = document.createElement('span');
         tagElement.classList.add('tag');
@@ -152,9 +164,19 @@ function openModal(title, description, tags) {
         tagContainer.appendChild(tagElement);
     });
 
+    // Show the modal
     document.getElementById('projectModal').style.display = 'block';
 }
 
+// Function to close the modal
 function closeModal() {
     document.getElementById('projectModal').style.display = 'none';
 }
+
+// Optional: Close the modal when clicking outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('projectModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};

@@ -199,6 +199,8 @@
     </div>
 </div>
 <!-- ----------portfolio------------ -->
+<div id="portfolio">
+<h1 class="sub-title">Portfolio</h1>
 <div class="buttons-section">
     <button class="button" onclick="filterProjects('all')">All</button>
     <button class="button" onclick="filterProjects('ml')">Machine Learning</button>
@@ -206,31 +208,34 @@
 </div>
 
 <div class="project-grid">
-    <div class="project-card">
-        <img src="images/project-image1.jpg" alt="Project Image" class="project-image">
+    <!-- Machine Learning Project -->
+    <div class="project-card apps">
+        <img src="images/patient-medical-record.jpg" alt="Project Image" class="project-image">
         <div class="project-description">
-            <h3>Project 1</h3>
-            <p>This is a brief description of Project 1...</p>
+            <h3>AI-Driven Medical Assistant</h3>
         </div>
-        <button class="view-project-btn" onclick="openModal('Project 1', 'Detailed project description...', ['Python', 'React'])">View Project</button>
+        <button class="view-project-btn" onclick="openModal('AI-Driven Medical Assistant', 'Developed an AI-powered medical assistant that leverages natural language processing (NLP) to convert user queries into Cypher commands, interacting with a Neo4j knowledge graph storing patient data and medical diagnoses. The system allows healthcare professionals to gain valuable insights into complex medical datasets, enhancing decision-making through an intuitive interface built with Streamlit. The project integrates technologies such as GPT-4, FAISS for similarity search, and LangChain to streamline medical query processing.', 
+        ['Python', 'Cypher', 'JavaScript', 'Neo4J', 'SQL'], 'images/patient-medical-record.jpg','https://github.com/Shreyas-Gadagi/Medical-Assistant' )">View Project</button>
     </div>
 
-    <div class="project-card">
+    <!-- App Development Project -->
+    <div class="project-card apps">
         <img src="images/project-image2.jpg" alt="Project Image" class="project-image">
         <div class="project-description">
             <h3>Project 2</h3>
-            <p>This is a brief description of Project 2...</p>
+            <p>This project is about app development...</p>
         </div>
-        <button class="view-project-btn" onclick="openModal('Project 2', 'Detailed project description...', ['JavaScript', 'Node.js'])">View Project</button>
+        <button class="view-project-btn" onclick="openModal('Project 1', 'Detailed description of Project 1...', ['Python', 'React', 'JavaScript'])">View Project</button>
     </div>
 
-    <div class="project-card">
+    <!-- Backend Project -->
+    <div class="project-card ml">
         <img src="images/project-image3.jpg" alt="Project Image" class="project-image">
         <div class="project-description">
             <h3>Project 3</h3>
-            <p>This is a brief description of Project 3...</p>
+            <p>This project is about backend development...</p>
         </div>
-        <button class="view-project-btn" onclick="openModal('Project 3', 'Detailed project description...', ['Java', 'Spring'])">View Project</button>
+        <button class="view-project-btn" onclick="openModal('Project 1', 'Detailed description of Project 1...', ['Python', 'React', 'JavaScript'])">View Project</button>
     </div>
 </div>
 
@@ -254,5 +259,20 @@
     </div>
 </footer>
 <script src="script.js"></script>
+
+<!-- Modal Structure -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modal-image" src="" alt="Project Image" class="modal-image">
+        <div id="modal-tags">
+            <!-- Project tags like Python, JavaScript will go here -->
+        </div>
+        <h2 id="modal-title">Project Title</h2>
+        <p id="modal-description">Detailed project description will go here...</p>
+        <a href="#" id="modal-link" class="modal-link" target="_blank">Learn More</a>
+    </div>
+</div>
+
 </body>
 </html>
